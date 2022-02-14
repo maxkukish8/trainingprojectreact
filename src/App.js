@@ -1,5 +1,5 @@
 
-import classes from './App.css';
+import classes from './App.scss';
 import Home from "./Components/Home";
 import ChangeNameComponent from "./Components/ChangeNameComponent";
 import CounterComponent from "./Components/CounterComponent";
