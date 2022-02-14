@@ -1,5 +1,5 @@
 
-import './App.css';
+import classes from './App.css';
 import Home from "./Components/Home";
 import ChangeNameComponent from "./Components/ChangeNameComponent";
 import CounterComponent from "./Components/CounterComponent";
@@ -19,11 +19,11 @@ import {BrowserRouter as Router, Route, Link, Routes} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <div className={classes.App}>
 
       <Router>
-          <header className="App-header">
-              <div className="Menu">
+          <header className={classes.AppHeader}>
+              <div className={classes.Menu}>
                   <Link to="/home">Home</Link>
                   <Link to="/change-name-component">ChangeNameComponent</Link>
                   <Link to="/counter-component">CounterComponent</Link>
@@ -43,7 +43,7 @@ function App() {
 
           <hr/>
 
-          <div className="Content">
+          <div className={classes.Content}>
               <Routes>
                   <Route path="/home" element={<Home/>} />
                   <Route path="/change-name-component" element={<ChangeNameComponent/>}/>
