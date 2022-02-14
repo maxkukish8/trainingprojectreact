@@ -1,17 +1,27 @@
 import React from 'react';
 
-const cars = (props) => (
-    <div style={{
-        border: '1px solid #ccc',
-        marginBottom: '10px',
-        display: 'block',
-        padding: '10px'
-    }}>
-        <h3>Car name: {props.name}</h3>
-        <p>Year: <strong>{props.year}</strong></p>
-        <input type="text" onChange={props.onChangeName} value={props.name}/>
-        <button onClick={props.onDelete}>Delete</button>
-    </div>
-)
+class Car extends React.Component {
+    render() {
 
-export default cars;
+        /*if (Math.random() > 0.7 ) {
+            throw new Error('Car random failed')
+        }*/
+
+        return (
+            <div style={{
+                border: '1px solid #ccc',
+                margin: '10px',
+                display: 'block',
+                padding: '10px'
+            }}>
+                <h3>Car name: {this.props.name}</h3>
+                <p>Year: <strong>{this.props.year}</strong></p>
+                <input type="text" onChange={this.props.onChangeName} value={this.props.name}/>
+                <button onClick={this.props.onDelete}>Delete</button>
+            </div>
+        )
+    }
+
+}
+
+export default Car;

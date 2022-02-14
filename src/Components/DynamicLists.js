@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Car from "./jsxsyntax/Car";
+import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
 
 class DynamicLists extends Component {
 
@@ -41,25 +42,30 @@ class DynamicLists extends Component {
         if (this.state.showCars) {
             cars = this.state.cars.map((car, index) => {
                 return (
-                    <Car
-                        key={index}
-                        name={car.name}
-                        year={car.year}
-                        onDelete={this.deleteHandler.bind(this, index)}
-                        onChangeName={event => this.onChangeName(event.target.value, index)}
-                    />
+                    <ErrorBoundary key={index}>
+                        <Car
+                            name={car.name}
+                            year={car.year}
+                            onDelete={this.deleteHandler.bind(this, index)}
+                            onChangeName={event => this.onChangeName(event.target.value, index)}
+                        />
+                    </ErrorBoundary>
+
                 )
             })
         }
 
         return (
-            <div>
+            <di>
                 <h1>{this.state.pageTitle}</h1>
-
                 <button onClick={this.toggleCarsHandler}>Toggle cars</button>
-
-                { cars }
-            </div>
+                <div style={{
+                    display: 'flex',
+                    justifyContent: 'center'
+                }}>
+                    { cars }
+                </div>
+            </di>
         )
     }
 }
