@@ -13,6 +13,7 @@ import Input from "./Components/Input";
 import List from "./Components/List";
 import ConditionalOperator from "./Components/ConditionalOperator";
 import DynamicLists from "./Components/DynamicLists";
+import StylesAndClasses from "./Components/StylesAndClasses"
 
 import {BrowserRouter as Router, Route, Link, Routes} from "react-router-dom";
 
@@ -36,6 +37,7 @@ function App() {
                   <Link to="/list">List</Link>
                   <Link to="/conditional-operator">ConditionalOperator</Link>
                   <Link to="/dynamic-lists">DynamicLists</Link>
+                  <Link to="/styles-classes">StylesAndClasses</Link>
               </div>
           </header>
 
@@ -62,6 +64,7 @@ function App() {
                   <Route path="/list" element={<List/>} />
                   <Route path="/conditional-operator" element={<ConditionalOperator/>} />
                   <Route path="/dynamic-lists" element={<DynamicLists/>} />
+                  <Route path="/styles-classes" element={<StylesAndClasses/>} />
               </Routes>
           </div>
       </Router>
