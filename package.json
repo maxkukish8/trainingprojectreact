@@ -28,7 +28,6 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-testing-library": "^3.9.2",
     "eslint-webpack-plugin": "^2.5.2",
@@ -50,6 +49,7 @@
     "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "5.0.2",
     "prompts": "2.4.0",
+    "prop-types": "^15.8.1",
     "radium": "^0.26.1",
     "react": "^17.0.2",
     "react-app-polyfill": "^2.0.0",
@@ -80,7 +80,11 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "eqeqeq": "off",
+      "no-unused-vars": "off"
+    }
   },
   "browserslist": {
     "production": [
@@ -150,5 +154,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.28.0"
   }
 }

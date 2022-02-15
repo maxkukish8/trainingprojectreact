@@ -14,8 +14,9 @@ import List from "./Components/List";
 import ConditionalOperator from "./Components/ConditionalOperator";
 import DynamicLists from "./Components/DynamicLists";
 import StylesAndClasses from "./Components/StylesAndClasses"
+import AppLink from "./Components/hoc/AppLink";
 
-import {BrowserRouter as Router, Route, Link, Routes} from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 function App() {
   return (
@@ -24,20 +25,20 @@ function App() {
       <Router>
           <header className={classes.AppHeader}>
               <div className={classes.Menu}>
-                  <Link to="/home">Home</Link>
-                  <Link to="/change-name-component">ChangeNameComponent</Link>
-                  <Link to="/counter-component">CounterComponent</Link>
-                  <Link to="/fcomponent">Fcomponent</Link>
-                  <Link to="/scomponent">Scomponent</Link>
-                  <Link to="/ccomponent">Ccomponent</Link>
-                  <Link to="/form-component">FormComponent</Link>
-                  <Link to="/todo">ToDo</Link>
-                  <Link to="/passing-parameters-to-function">PassingParametersToFunction</Link>
-                  <Link to="/input">Input</Link>
-                  <Link to="/list">List</Link>
-                  <Link to="/conditional-operator">ConditionalOperator</Link>
-                  <Link to="/dynamic-lists">DynamicLists</Link>
-                  <Link to="/styles-classes">StylesAndClasses</Link>
+                  <AppLink to="/home">Home</AppLink>
+                  <AppLink to="/change-name-component">ChangeNameComponent</AppLink>
+                  <AppLink to="/counter-component">CounterComponent & Fragments</AppLink>
+                  <AppLink to="/fcomponent">Fcomponent</AppLink>
+                  <AppLink to="/scomponent">Scomponent</AppLink>
+                  <AppLink to="/ccomponent">Ccomponent</AppLink>
+                  <AppLink to="/form-component">FormComponent</AppLink>
+                  <AppLink to="/todo">ToDo</AppLink>
+                  <AppLink to="/passing-parameters-to-function">PassingParametersToFunction</AppLink>
+                  <AppLink to="/input">Input</AppLink>
+                  <AppLink to="/list">List</AppLink>
+                  <AppLink to="/conditional-operator">ConditionalOperator</AppLink>
+                  <AppLink to="/dynamic-lists">DynamicLists and PropTypes</AppLink>
+                  <AppLink to="/styles-classes">StylesAndClasses</AppLink>
               </div>
           </header>
 

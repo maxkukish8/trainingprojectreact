@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import withClasses from "../hoc/withClasses";
+import classes from '../newStyles.css';
 
 class Car extends React.Component {
     render() {
@@ -8,20 +10,15 @@ class Car extends React.Component {
         }*/
 
         return (
-            <div style={{
-                border: '1px solid #ccc',
-                margin: '10px',
-                display: 'block',
-                padding: '10px'
-            }}>
+            <Fragment>
                 <h3>Car name: {this.props.name}</h3>
                 <p>Year: <strong>{this.props.year}</strong></p>
                 <input type="text" onChange={this.props.onChangeName} value={this.props.name}/>
                 <button onClick={this.props.onDelete}>Delete</button>
-            </div>
+            </Fragment>
         )
     }
 
 }
 
-export default Car;
+export default withClasses(Car, classes.Car);

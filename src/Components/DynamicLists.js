@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Car from "./jsxsyntax/Car";
 import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
+import Aux from "./hoc/Aux";
+import PropTypes from 'prop-types';
 
 class DynamicLists extends Component {
 
@@ -56,7 +58,7 @@ class DynamicLists extends Component {
         }
 
         return (
-            <di>
+            <Aux>
                 <h1>{this.state.pageTitle}</h1>
                 <button onClick={this.toggleCarsHandler}>Toggle cars</button>
                 <div style={{
@@ -65,9 +67,16 @@ class DynamicLists extends Component {
                 }}>
                     { cars }
                 </div>
-            </di>
+            </Aux>
         )
     }
+}
+
+DynamicLists.propTypes = {
+    name: PropTypes.string,
+    year: PropTypes.number,
+    onDelete: PropTypes.func,
+    onChangeName: PropTypes.func
 }
 
 export default DynamicLists;
