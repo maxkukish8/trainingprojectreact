@@ -33,7 +33,6 @@ class DynamicLists extends Component {
     deleteHandler(index) {
         let cars = this.state.cars.concat()
         cars.splice(index, 1)
-
         this.setState({cars})
     }
 
@@ -48,6 +47,7 @@ class DynamicLists extends Component {
                         <Car
                             name={car.name}
                             year={car.year}
+                            index={index}
                             onDelete={this.deleteHandler.bind(this, index)}
                             onChangeName={event => this.onChangeName(event.target.value, index)}
                         />

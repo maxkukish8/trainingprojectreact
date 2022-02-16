@@ -5,7 +5,7 @@
 
 .input {}
 
-.input:active, .input:focus {
+.input:active {
     outline: none;
 }
 

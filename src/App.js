@@ -37,7 +37,7 @@ function App() {
                   <AppLink to="/input">Input</AppLink>
                   <AppLink to="/list">List</AppLink>
                   <AppLink to="/conditional-operator">ConditionalOperator</AppLink>
-                  <AppLink to="/dynamic-lists">DynamicLists and PropTypes</AppLink>
+                  <AppLink to="/dynamic-lists">DynamicLists and PropTypes and Ref</AppLink>
                   <AppLink to="/styles-classes">StylesAndClasses</AppLink>
               </div>
           </header>

@@ -1,5 +1,8 @@
 import React, {Component} from "react";
-import Aux from "./hoc/Aux";
+/*import Aux from "./hoc/Aux";*/
+import ContextApi from "./contextApi/ContextApi";
+
+export const ClickedContext = React.createContext(false);
 
 class CounterComponent extends Component {
     constructor(props) {
@@ -41,6 +44,12 @@ class CounterComponent extends Component {
                 <button onClick={this.decrement}>decrement</button>
                 <button onClick={this.reset}>reset</button>
                 <h2>Current: {this.state.count}</h2>
+
+                <ClickedContext.Provider value={this.state.clicked}>
+                    <ContextApi />
+                </ClickedContext.Provider>
+
+                <button onClick={() => this.setState({clicked: true})}>Change clicked</button>
             </>
         )
 
